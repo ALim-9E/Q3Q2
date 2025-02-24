@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- Javascript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Q2: Ticketing Center</title>
+</head>
+<body>
+
+	<div class="container mt-5">
+
+		<div class="row">
+
+			<h1>Ticketing Center</h1><hr>
+
+			<!-- INFO EVENT -->
+
+			<div class="col-md-4">
+				<details>
+					<summary>Personal Information</summary>
+					<p>Fill out the form below.</p>
+
+					
+
+					<form>
+						<label>Enter Name:</label>
+						<input type="text" id="persona" class="form-control">
+
+					<br>
+
+						<label>Enter Email:</label>
+						<input type="email" id="email" class="form-control">
+					</form>
+
+					<button type="button" class="btn btn-danger mt-3" onclick="info()">Submit Info</button>
+
+					<script type="text/javascript">
+						function info() {
+							var name = document.getElementById('persona').value;
+
+							window.alert("Thanks, " + name + "! Please proceed to the next section.");
+
+						}
+					</script>
+
+				</details>
+
+			</div>
+
+			<!-- PRICE EVENT -->
+
+			<div class="col-md-4">
+				<details>
+					<summary>Ticket Price</summary>
+					<p>Fill out the form below.</p>
+
+					<label for="movies">Choose your movie:</label>
+
+					<select name="movies" id="movies" class="form-control">
+						<option value="monkey" id="monkey">The Monkey</option>
+						<option value="america" id="america">Captain America: Brave New World</option>
+						<option value="homestead" id="homestead">Homestead</option>
+						<option value="cleaner" id="cleaner">Cleaner</option>
+					</select>
+
+					<br>
+
+					<label for="time">Choose your time:</label>
+
+					<select name="time" id="time" class="form-control">
+						<option value="eight">8:30 PM</option>
+						<option value="seven">7:45 PM</option>
+						<option value="nine">9:30 PM</option>
+						<option value="five">5:00 PM</option>
+					</select>
+
+					<button type="button" class="btn btn-danger mt-3" onclick="price()">Submit Info</button>
+
+					<script type="text/javascript">
+						function price() {
+
+							var movies = 250
+							var time = 250
+
+							var ticket = movies * time
+
+							window.alert('Your price is ' + ticket + '. Proceed to print!')
+
+							
+						}
+					</script>
+				</details>
+
+			</div>
+
+			<!-- TICKET EVENT -->
+
+			<div class="col-md-4">
+				<details>
+					<summary>Print Ticket</summary>
+					<p>Please print the ticket below.</p>
+
+					<br>
+
+					<img src="movie ticket.png" style="width: 300px;" id="movie">
+
+					<br><br>
+
+					<button type="button" class="btn btn-danger" onclick="print()">Print Ticket</button>
+					<button type="button" class="btn btn-danger" onclick="window.location.reload()">Buy More Tickets</button>
+
+					<script type="text/javascript">
+						function print() {
+							var ticket = document.getElementById('movie').value;
+
+							window.alert("Check your email for your ticket. Thank you!")
+						}
+					</script>
+
+				</details>
+
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<p class="text-center mt-5"><a href="https://alim-9e.github.io/Q2PROFILE/" class="text-light">Angela Bridget S. Lim | 9 Emerald</a></p>
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+body {
+	font-family: Sour Gummy;
+	align-items: center;
+	text-align: center;
+	background-image: url("movie theatre.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+.container {
+	background-color: midnightblue;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+p a {
+	text-decoration: none;
+}
+
+.footer {
+	background-color: indianred;
+	border-radius: 10px;
+}
+
+h1 {
+	background-color: indianred;
+	border-radius: 10px;
+}
